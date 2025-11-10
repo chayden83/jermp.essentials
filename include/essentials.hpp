@@ -744,13 +744,7 @@ private:
 #endif
 
 [[maybe_unused]] static bool create_directory(std::string const& name) {
-    if (mkdir(name.c_str(), 0777) != 0) {
-        if (errno == EEXIST) {
-            std::cerr << "directory already exists" << std::endl;
-        }
-        return false;
-    }
-    return true;
+    return mkdir(name.c_str(), 0777) == 0;
 }
 
 [[maybe_unused]] static bool remove_directory(std::string const& name) {
