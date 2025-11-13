@@ -215,13 +215,13 @@ struct timer {
         m_timings.clear();
     }
 
-    double min() const {
-        return *std::min_element(m_timings.begin(), m_timings.end());
-    }
+    // double min() const {
+    //     return *std::min_element(m_timings.begin(), m_timings.end());
+    // }
 
-    double max() const {
-        return *std::max_element(m_timings.begin(), m_timings.end());
-    }
+    // double max() const {
+    //     return *std::max_element(m_timings.begin(), m_timings.end());
+    // }
 
     void discard_first() {
         if (runs()) {
