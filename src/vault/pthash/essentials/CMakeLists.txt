@@ -1,7 +1,7 @@
 vault_add_header_only_library(vault.pthash.essentials)
 
 target_sources(vault.pthash.essentials PUBLIC FILE_SET HEADERS BASE_DIRS ${PROJECT_SOURCE_DIR}/include FILES
-  ${PROJECT_SOURCE_DIR}/include/vault/pthash/essentials
+  ${PROJECT_SOURCE_DIR}/include/vault/pthash/essentials/essentials.hpp
 )
 
 vault_install_targets(

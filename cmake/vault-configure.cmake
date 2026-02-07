@@ -1,7 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
-include_guard(DIRECTORY)
-
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 
