@@ -1,11 +1,27 @@
-cmake_minimum_required(VERSION 3.10...4.0)
+cmake_minimum_required(VERSION 3.5...4.0)
 
-project(ESSENTIALS)
-set(PROJECT_VENDOR "Giulio Ermanno Pibiri")
-set(PROJECT_URL "https://github.com/jermp/essentials")
-set(PROJECT_DESCRIPTION "Essential C++ utilities.")
+project(vault.pthash.essentials
+  DESCRIPTION "Support library for vault.pthash.bits"
+  LANGUAGES   CXX
+  VERSION     0.1.0
+)
 
-if(NOT TARGET ESSENTIALS)
-    add_library(ESSENTIALS INTERFACE)
-    target_include_directories(ESSENTIALS INTERFACE include)
+enable_testing()
+
+include(GNUInstallDirs)
+include(cmake/vault-configure.cmake)
+
+add_subdirectory(src/vault/pthash/essentials)
+
+if(VAULT_PTHASH_ESSENTIALS_BUILD_TESTS)
+endif()
+
+if(VAULT_PTHASH_ESSENTIALS_BUILD_EXAMPLES)
+endif()
+
+if(VAULT_PTHASH_ESSENTIALS_BUILD_BENCHMARKS)
+endif()
+
+if(VAULT_PTHASH_ESSENTIALS_CONFIG_FILE_PACKAGE)
+  include(cmake/vault-config-file-package.cmake)
 endif()
