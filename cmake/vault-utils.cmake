@@ -1,4 +1,4 @@
-include_guard(DIRECTORY)
+include_guard(GLOBAL)
 
 # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
